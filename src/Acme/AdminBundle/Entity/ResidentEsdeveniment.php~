@@ -1,0 +1,38 @@
+<?php
+
+namespace Acme\AdminBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ResidentEsdeveniment
+ *
+ * @ORM\Table(name="resident_esdeveniment")
+ * @ORM\Entity
+ */
+class ResidentEsdeveniment
+{
+    /**
+     * @var \Resident
+     *
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\OneToOne(targetEntity="Resident")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idResident", referencedColumnName="id")
+     * })
+     */
+    private $idresident;
+
+    /**
+     * @var \Esdeveniment
+     *
+     * @ORM\ManyToOne(targetEntity="Esdeveniment")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="idEsdeveniment", referencedColumnName="id")
+     * })
+     */
+    private $idesdeveniment;
+
+
+}

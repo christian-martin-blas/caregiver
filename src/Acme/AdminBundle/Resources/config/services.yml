@@ -1,0 +1,7 @@
+parameters:
+#    eolymp_admin.example.class: Eolymp\AdminBundle\Example
+
+services:
+#    eolymp_admin.example:
+#        class: %eolymp_admin.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="UserResident" table="user_resident">
+    <one-to-one field="iduser" target-entity="User">
+      <join-columns>
+        <join-column name="idUser" referenced-column-name="id"/>
+      </join-columns>
+    </one-to-one>
+    <many-to-one field="idresident" target-entity="Resident">
+      <join-columns>
+        <join-column name="idResident" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

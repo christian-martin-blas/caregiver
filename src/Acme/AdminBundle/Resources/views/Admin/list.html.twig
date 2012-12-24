@@ -1,0 +1,22 @@
+<style> 
+#tabs1 { font: bold 7.5pt Verdana; } #tabs9 img { border: none; } #navcontainer { margin: 10px 0 0 30px; padding: 0; height: 20px; } #navcontainer ul { border: 0; margin: 0; padding: 0; list-style-type: none; text-align: center; } #navcontainer ul li { display: block; float: left; text-align: center; padding: 0; margin: 0; } #navcontainer ul li a { background: #fff; width: 78px; height: 18px; border-top: 1px solid #ddd; border-left: 1px solid #ddd; border-bottom: 1px solid #ddd; border-right: 1px solid #ddd; padding: 0; margin: 0 0 5px 0; color: #666; text-decoration: none; display: block; text-align: center; font: normal 10px/18px verdana; } #navcontainer ul li a:hover { color: #6659A7; background: #eeeeee; } #navcontainer a:active { background: #c60; color: #fff; } #navcontainer li#active a { background: #c60; border: 1px solid #c60; color: #fff; } 
+</style> 
+<div id="navcontainer"> 
+        <ul id="navlist"> 
+                <li><a href='{{ path('profile') }}'>    <span>Profile</span></a></li> 
+                <li><a href='{{ path('change_password') }}'>    <span>Change Password</span></a></li> 
+                <li><a href='{{ path('edit_profile') }}'>       <span>Edit Profile</span></a></li> 
+                <li><a href='{{ path('register') }}'>   <span>Register User</span></a></li> 
+                <li><a href="#">        <span>Link 6</span></a></li> 
+                <li><a href="#">        <span>Link 7</span></a></li> 
+        </ul> 
+</div>
+
+<h1> <center> Index Page</center></h1> 
+
+{% for item in esdeveniments %}
+    <li><a href="{{ path('event_list') }}">{{item.nom}}</a></li>
+{% endfor %}
+
+
+<input type="button" onclick=" location.href='{{ path('logout') }}' " value="Logout" name="boton" /> 

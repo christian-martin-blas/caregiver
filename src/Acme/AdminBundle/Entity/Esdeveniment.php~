@@ -1,0 +1,60 @@
+<?php
+
+namespace Acme\AdminBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Esdeveniment
+ *
+ * @ORM\Table(name="esdeveniment")
+ * @ORM\Entity
+ */
+class Esdeveniment
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255, nullable=true)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="motiu", type="string", length=255, nullable=true)
+     */
+    private $motiu;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dataEsd", type="datetime", nullable=true)
+     */
+    private $dataesd;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dataAlarma", type="datetime", nullable=true)
+     */
+    private $dataalarma;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="periodicitat", type="string", length=255, nullable=true)
+     */
+    private $periodicitat;
+
+
+}
